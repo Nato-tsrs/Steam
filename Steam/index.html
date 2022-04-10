@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Steam</title>
+</head>
+<body>
+  <div class="head">
+ 
+    <div class="left">
+      
+      
+      <img width="190" src="./images/logo_steam.svg" id="logo" ></i>
+      <input id="check" type="checkbox">
+      <label onclick="openList()" for="check" id="burger">   <i class="fa-solid fa-bars"></i>   </label>
+        <ul id="list">
+          <input type="checkbox" id="x">
+          <li id="cancel" onclick="closeList()"><label  for="x"> <i class="fa-solid fa-x"></i></label></li>
+              <li >STORE</li>
+              <li>COMMUNITY</li>
+              <li>ABOUT</li>
+              <li>SUPPORT</li>
+         
+        </ul>
+          <style>
+            #check{
+              display: none;
+            }
+            #burger{
+              display: none;
+             
+            }
+            #cancel{
+               display: none;
+             }
+             #x{
+               display: none;
+             }
+            @media screen and (max-width:1300px){
+              #burger{
+              display: block;
+              float: left;
+              font-size: 30px;
+            }
+            #cancel{
+               display: flex;
+               justify-content: flex-end;
+             }
+             /* #x:checked  ~ #list{
+              visibility: hidden;
+              background-color: red;
+             } */
+            .right{
+              display: none;
+            }
+             #check:checked ~ #list{
+                visibility: visible;
+                
+            }
+            
+            .head{
+              flex-wrap:nowrap;
+          
+            }
+            .right{
+              margin-right: 0;
+            }
+            #logo{
+                  margin-left:40%;
+              }
+            .left{
+              padding:0;
+              margin: 0;
+            
+              width: 100%;
+             justify-content: flex-end;
+             
+              display: flex;
+              flex-direction: row-reverse;
+            }
+            .right{
+              
+            }
+            #list ul{
+margin:0;
+padding:0;
+            }
+            #list li{
+              padding:20px 10px;
+border-bottom:2px solid rgba(90, 87, 87, 0.509);
+border-top: 2px solid black;
+width:100%;
+            }
+             #list{
+               visibility: hidden;
+              position: absolute;
+              z-index: 2;
+               display: flex;
+               box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.47);
+               flex-direction: column;
+            width: 300px;
+          background-color: #171a21;
+            margin: 0px !important;
+            height: 100vh;
+            justify-content: flex-start;
+            left: 0px;
+            top: 0px;
+               /* height:100%; */
+             }
+            
+            .left ul li{
+  
+  margin-top: 0;
+  margin-bottom: 1px;
+  margin-left:0;
+}
+           }
+           .left{
+             display: flex;
+           }
+          </style>
+          
+        
+     </div>
+     <div class="right">
+       <div class="installbtn" id="install">
+        <img  src="https://store.cloudflare.steamstatic.com/public/shared/images/header/btn_header_installsteam_download.png?v=1" alt="">  
+        <a  href="#">Install Steam</a>
+      </div>
+
+      <a href="#">Login</a>
+      <p>&nbsp;|&nbsp;</p>
+     <div class="language">
+          <a href="#">Language</a>
+          <img src="https://store.cloudflare.steamstatic.com/public/shared/images/popups/btn_arrow_down_padded.png" alt="">
+              
+     </div>
+      
+     </div>
+ 
+  </div>
+  <img  id="background2" src="./images/acct_creation_bg.jpg" alt="">
+
+ <div class="bottom">
+   
+ 
+<form action="" class="account_form_box">
+  <div class="form_header">
+    Create Your Account
+  </div>
+  <div class="ins">
+    <label id="lab1" for="input1">Email Address</label>
+    <input name="input1" type="Email" >
+  </div>
+  <div class="ins">
+    <label id="lab1" for="input2">Confirm your Address</label>
+    <input name="input2" type="Email" >
+  </div>
+  <div class="ins">
+    <label id="lab1" for="input3">Country of Residence</label>
+   <select name="countries" id="input3">
+     <Option>Georgia</Option>
+     <Option>Georgia</Option>
+     <Option>Georgia</Option>
+   </select>
+  </div>
+  <div class="robotCheck">
+    <div class="check">
+      <input id="chckbox" type="checkbox"> 
+      <label for="chckbox">I'm not a robot</label>
+    </div>
+    <img  width=50 src="./images/RecaptchaLogo.svg.png" alt="">
+  </div>
+
+  <div class="ageCHeck">
+    <input type="checkbox" id="age">
+    <label for="age">&nbsp; I am 13 years of age or older and agree to the terms of the Steam Subscriber Agreement and the Valve Privacy Policy.</label>
+  </div>
+  <button id="Continue">Continue</button>
+</form>
+ </div>
+ <script src="./script.js"></script>
+</body>
+</html>
